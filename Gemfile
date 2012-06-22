@@ -6,6 +6,9 @@ gem 'foursquare2'
 gem 'haml'
 gem 'mongoid'
 gem 'bson_ext'
+gem 'geocoder'
+gem 'haml-rails'
+gem "twitter-bootstrap-rails"
 
 group :development, :test do
   gem 'pry'

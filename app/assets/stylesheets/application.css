@@ -11,3 +11,9 @@
  *= require_self
  *= require_tree .
  */
+
+.gluten div {
+  font-size: 1.2em;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}

@@ -1,6 +1,15 @@
+defaults: &defaults
+  host: localhost
+  persist_in_safe_mode: true
 development:
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  <<: *defaults
+  database: paleospots_dev
 staging:
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  <<: *defaults
+  database: paleospots_staging
+test: &test
+  <<: *defaults
+  persist_in_safe_mode: false
+  database: paleospots_test
 production:
   uri: <%= ENV['MONGOHQ_URL'] %>

@@ -1,11 +1,9 @@
 displayTips = (tips) ->
   $div = $('.gluten')
   $.each tips, (index, tip) ->
-    $div.append($("<h1>").text(tip.venue))
+    $div.append($("<h2>").text(tip.venue))
     $div.append($("<h4>").text(tip.location.address + ", " + tip.location.city))
-    
-    $div.append($("<h2>").text(tip.text))
-    $div.append($("<hr>"))
+    $div.append($("<div>").text(tip.text))
 
 loadTips = (position) =>
   lat = position.coords.latitude
