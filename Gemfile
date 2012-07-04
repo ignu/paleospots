@@ -9,6 +9,7 @@ gem 'bson_ext'
 gem 'geocoder'
 gem 'haml-rails'
 gem "twitter-bootstrap-rails"
+gem "rails-backbone"
 
 group :development, :test do
   gem 'pry'

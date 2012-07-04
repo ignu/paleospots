@@ -25,3 +25,21 @@
   margin-bottom: 18px;
   color: #222;
 }
+
+body {
+  padding-top: 32px !important;
+}
+
+body h1 {
+  font-size: 43px;
+  margin-top: 0px;
+}
+
+.foursquare {
+  margin: 0px auto;
+  width: 241px;
+}
+.foursquare a img {
+  width: 241px;
+  height: 61px;
+}
