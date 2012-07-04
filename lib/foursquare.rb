@@ -9,6 +9,6 @@ class Foursquare
   def tips(query, lat, long)
      tips = @client.search_tips(:ll => "#{lat},#{long}", :query => query)
      tips.sort!{|t| t.venue['location']['distance']}
-     tips.map { |t| { id: 3, text: t.text, venue: t.venue['name'], location: t.venue['location'] }}
+     tips.map { |t| { id: t.id, url: "http://foursquare.com/items/#{t.id}", text: t.text, venue: t.venue['name'], location: t.venue['location'] }}
   end
 end
