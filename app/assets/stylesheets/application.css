@@ -12,7 +12,7 @@
  *= require_tree .
  */
 
-.gluten div {
+.tip-text {
   font-size: 1.2em;
   padding-top: 18px;
   padding-bottom: 18px;
@@ -39,7 +39,26 @@ body h1 {
   margin: 0px auto;
   width: 241px;
 }
+
+li {
+  list-style-type: none;
+}
+
 .foursquare a img {
   width: 241px;
   height: 61px;
+}
+
+h2 {
+  float: left;
+}
+.tipLink {
+  padding: 5px;
+  padding-top: 9px;
+  float: left;
+  opacity:0.5;
+  filter:alpha(opacity=50);
+}
+.clear {
+  clear:both;
 }

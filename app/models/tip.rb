@@ -6,5 +6,4 @@ class Tip
   index [[ :location, Mongo::GEO2D ]]
 
   before_save :set_location
-
 end

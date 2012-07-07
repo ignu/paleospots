@@ -16,6 +16,4 @@ class Paleospots.Views.Tips.TipView extends Backbone.View
 
   render: ->
     $(@el).html(@template(@model.toJSON() ))
-    console.log "RENDERING TIP", @model
-    console.log "RENDERING TIP VIEW", $(@el)
-    return this
+    @

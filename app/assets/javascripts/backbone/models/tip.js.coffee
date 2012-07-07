@@ -10,4 +10,7 @@ class Paleospots.Models.Tip extends Backbone.Model
 
 class Paleospots.Collections.TipsCollection extends Backbone.Collection
   model: Paleospots.Models.Tip
+
+class Paleospots.Collections.GlutenTipsCollection extends Backbone.Collection
+  model: Paleospots.Models.Tip
   url: '/tips'

@@ -4,6 +4,7 @@ class Paleospots.Views.Tips.IndexView extends Backbone.View
   template: JST["backbone/templates/tips/index"]
 
   initialize: () ->
+    @options.tips.bind('add', @addOne)
     @options.tips.bind('reset', @addAll)
 
   addAll: () =>
