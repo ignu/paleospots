@@ -2,6 +2,11 @@ Paleospots.Views.Tips ||= {}
 
 class Paleospots.Views.Tips.IndexView extends Backbone.View
   template: JST["backbone/templates/tips/index"]
+  events:
+    "click button" : "new"
+
+  new: =>
+    router.navigate "#new", { trigger: true }
 
   initialize: () ->
     @options.tips.bind('add', @addOne)

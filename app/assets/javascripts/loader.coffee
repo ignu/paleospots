@@ -1,7 +1,7 @@
 
 loadTips = (position) =>
-  lat = position.coords.latitude
-  long = position.coords.longitude
+  window.lat = position.coords.latitude
+  window.long = position.coords.longitude
   Paleospots.Collections.TipsCollection.url = "/tips/local?lat=#{lat}&long=#{long}&q=paleo"
   Paleospots.Models.Tip.url                 = "/tips/local?lat=#{lat}&long=#{long}&q=paleo"
   tips = new Paleospots.Collections.TipsCollection()

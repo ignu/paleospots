@@ -1,4 +1,5 @@
 class Paleospots.Models.Tip extends Backbone.Model
+  url: '/tips'
   paramRoot: 'tip'
 
   defaults:

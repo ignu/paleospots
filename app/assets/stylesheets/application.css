@@ -62,3 +62,15 @@ h2 {
 .clear {
   clear:both;
 }
+
+#tips {
+  height: 400px;
+  width: 800px;
+  position: fixed;
+  z-index: 99;
+  top: 10px
+  margin-left: 0px auto;
+  background-color: ##2a333c;
+  display: none;
+  padding: 20px;
+}

@@ -5,6 +5,11 @@ class TipsController < ApplicationController
     render json: tips.to_json
   end
 
+  def create
+    @tip = Tip.create params[:tip]
+    render json: @tip.to_json
+  end
+
   def index
 
   end

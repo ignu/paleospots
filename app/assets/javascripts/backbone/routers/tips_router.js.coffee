@@ -8,11 +8,16 @@ class Paleospots.Routers.TipsRouter extends Backbone.Router
     "index"    : "index"
     ":id/edit" : "edit"
     ":id"      : "show"
-    ".*"        : "index"
+    ".*"       : "index"
 
   newTip: ->
     @view = new Paleospots.Views.Tips.NewView(collection: @tips)
-    $("#tips").html(@view.render().el)
+    $("#gmap").hide()
+    $("ul").hide()
+    $(".foursquare").hide()
+    $(".foursquare-tips button").hide()
+    venues_view = new Paleospots.Views.Tips.VenueListView
+    $("#tips").html(@view.render().el).show().css({top: '90px'})
 
   index: ->
     @view = new Paleospots.Views.Tips.IndexView(tips: @tips)
