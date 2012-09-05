@@ -21,15 +21,13 @@ class Paleospots.Views.Tips.VenueListView extends Backbone.View
   updateVenue: (id) =>
     venue = _.find @results, (venue) ->
       venue.id == id
-    form = $("#new-tip")
-    console.log 'venue', venue
-    console.log 'results', @results
-    console.log 'id', id
-    form.find("#lat").val(venue.location.lat)
-    form.find("#long").val(venue.location.lng)
-    form.find("#foursquare_id").val(venue.id)
-    form.find("#venue_name").val(venue.name)
-    console.log form.serialize()
+    console.log venue
+    console.log '----'
+    $form = $("#new-tip")
+    $form.find("#lat").val(venue.location.lat)
+    $form.find("#long").val(venue.location.lng)
+    $form.find("#foursquare_id").val(venue.id)
+    $form.find("#venue_name").val(venue.name)
   loadVenues: =>
     $(@el).attr("type", "hidden").css("width", "400px").css("border", "1px solid red").css("height", "30px")
     attributes = $.map @collection.models, (model) ->

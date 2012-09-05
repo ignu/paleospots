@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '~> 3.2.8'
 
 gem 'foursquare2'
 gem 'haml'
@@ -12,7 +12,7 @@ gem "twitter-bootstrap-rails"
 gem "rails-backbone"
 
 group :development, :test do
-  gem 'pry'
+  gem 'pry-remote'
 end
 
 # Gems used only for assets and not required

@@ -9,14 +9,16 @@ class Paleospots.Views.Tips.NewView extends Backbone.View
   constructor: (options) ->
     super(options)
     @model = new @collection.model()
-
-    @model.bind("change:errors", () =>
-      this.render()
-    )
+    @model.bind("change:errors", @render)
 
   save: (e) ->
     e.preventDefault()
     e.stopPropagation()
+
+    @model.set "lat", @$el.find("#lat").val()
+    @model.set "long", @$el.find("#long").val()
+    @model.set "venue_name", @$el.find("#venue_name").val()
+    @model.set "foursquare_id", @$el.find("#foursquare_id").val()
 
     @model.unset("errors")
 
@@ -29,9 +31,7 @@ class Paleospots.Views.Tips.NewView extends Backbone.View
         @model.set({errors: $.parseJSON(jqXHR.responseText)})
     )
 
-  render: ->
+  render: =>
     $(@el).html(@template(@model.toJSON() ))
-
-    this.$("form").backboneLink(@model)
-
-    return this
+    @$("form").backboneLink(@model)
+    this
