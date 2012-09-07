@@ -6,11 +6,25 @@ class TipsController < ApplicationController
   end
 
   def create
-    @tip = Tip.create params[:tip]
-    render json: params.to_json
-    #render json: @tip.to_json
+    @venue = find_or_create_venue params[:tip].delete(:venue)
+    @venue.tips << Tip.new(params[:tip])
+    @venue.save!
+    render json: @tip.to_json
   end
+
 
   def index
   end
+
+  private
+
+    def find_or_create_venue(venue_params)
+      venue =  Venue.where(:foursquare_id => venue_params[:foursquare_id]).first
+      if venue
+        venue.update_attributes venue_params
+      else
+        venue = Venue.create(venue_params)
+      end
+      venue
+    end
 end

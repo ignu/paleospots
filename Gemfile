@@ -13,6 +13,9 @@ gem "rails-backbone"
 
 group :development, :test do
   gem 'pry-remote'
+  gem 'rspec-rails'
+  gem 'shoulda'
+  gem 'factory_girl_rails'
 end
 
 # Gems used only for assets and not required
