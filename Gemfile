@@ -16,6 +16,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda'
   gem 'factory_girl_rails'
+  gem 'rspec-nc'
+  gem 'guard-rspec'
 end
 
 # Gems used only for assets and not required

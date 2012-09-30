@@ -4,7 +4,7 @@ describe TipsController do
   describe "POST #create" do
     before do
       Venue.delete_all
-      post :create, { tip: { text: "horrible place", venue: { name: "Burger King", foursquare_id: "12903"} } }
+      post :create, { tip: { text: "horrible place", venue: { name: "Burger King", foursquare_id: "12903", lat: 39.9524206, long: -75.1468956 } } }
     end
 
     it "creates a tip" do

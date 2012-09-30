@@ -20,3 +20,11 @@ RSpec.configure do |config|
   config.order = "random"
   config.include FactoryGirl::Syntax::Methods
 end
+
+def indy_hall
+  { lat: 39.9512805, long: -75.14545199999999 }
+end
+
+def rite_aid
+  { lat: 39.950965, lng: -75.153492 }
+end
