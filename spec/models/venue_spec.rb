@@ -12,7 +12,7 @@ describe Venue do
 
   describe ".near" do
     let(:coords) { rite_aid }
-    let!(:venue) { create(:venue, coords) }
+    let!(:venue) { create(:venue) }
 
     it "returns nearby venues" do
       Venue.near(indy_hall).should include venue
